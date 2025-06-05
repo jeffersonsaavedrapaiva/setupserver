@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Cores
@@ -13,7 +13,7 @@ vermelho="\e[91m"
 reset="\e[0m"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 sudo apt update
@@ -21,7 +21,7 @@ sudo apt update
 sudo apt upgrade -y
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 nome_aviso(){
@@ -92,7 +92,7 @@ nome_verificando(){
     echo ""
 }
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 desc_ver(){
@@ -101,7 +101,7 @@ echo ""
 } 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 clear
@@ -132,7 +132,7 @@ if [ "$PWD" != "/root" ]; then
 fi
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 
@@ -268,19 +268,19 @@ fi
 
 echo ""
 
-# Verifica se o arquivo SetupOrion já existe
-if [ -e "SetupOrion" ]; then
+# Verifica se o arquivo setupdeeplogic já existe
+if [ -e "setupdeeplogic" ]; then
     echo ""
-    rm SetupOrion
+    rm setupdeeplogic
 fi
 
 # Baixa o script
-curl -sSL https://raw.githubusercontent.com/oriondesign2015/SetupOrion/main/SetupOrion -o SetupOrion
+curl -sSL https://raw.githubusercontent.com/jeffersonsaavedrapaiva/setupserver/main/setupdeeplogic -o setupdeeplogic
 if [ $? -eq 0 ]; then
     echo "14/14 - [ OK ] - Baixando o script"
     # Executa o script baixado
-    chmod +x SetupOrion
-    ./SetupOrion
+    chmod +x setupdeeplogic
+    ./setupdeeplogic
 else
     echo "14/14 - [ OFF ] - Baixando o script"
     echo "Encerrando o setup"
@@ -289,11 +289,11 @@ fi
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         ORION DESIGN                                        ##
+##                                         DeepLogic DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 sudo apt update
 sudo apt upgrade -y
 
 clear
-rm SetupOrion
+rm setupdeeplogic
